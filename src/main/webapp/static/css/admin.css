@@ -1,0 +1,16 @@
+.add {
+    background-image: url(../images/icons/fam/add.png);
+}
+.delete {
+    background-image: url(../images/icons/fam/delete.png);
+}
+.edit{
+    background-image: url(../images/icons/fam/page_white_edit.png);
+}
+.user{
+    background-image: url(../images/icons/fam/user.png);
+}.accept{
+    background-image: url(../images/icons/fam/accept.png);
+}.cog{
+     background-image: url(../images/icons/fam/cog.png);
+ }

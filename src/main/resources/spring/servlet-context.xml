@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd 
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 扫描组件 -->
+	<context:component-scan base-package="com.vacomall.component"></context:component-scan>
+	
+	<!-- 扫描控制器 -->
+	<context:component-scan base-package="com.vacomall.controller"></context:component-scan>
+	
+		<bean id="objectMapper" class=" com.vacomall.jackson.CustomObjectMapper" init-method="init">
+		<!-- 驼峰转为下划线 -->
+	    <property name="camelCaseToLowerCaseWithUnderscores" value="false"/>
+	    <property name="dateFormatPattern" value="yyyy-MM-dd HH:mm:ss"/>
+	</bean>
+	
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
+				 <property name="objectMapper" ref="objectMapper"/>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- jsp的配置 -->
+	<bean id="internalResourceViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="order" value="1" />
+
+	</bean>
+
+	<mvc:resources location="/app/" mapping="/app/**" />
+	<mvc:resources location="/static/" mapping="/static/**" />
+
+	<!-- 开启aop，对类代理 -->
+	<aop:config proxy-target-class="true" />
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- 定义文件上传解析器 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设定默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+		<property name="maxUploadSize" value="5242880"></property>
+	</bean>
+
+	<bean
+		class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor" />
+
+</beans>  

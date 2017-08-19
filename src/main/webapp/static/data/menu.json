@@ -1,0 +1,54 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id":1,
+      "text": "系统管理",
+      "sort": 1,
+      /*"glyph": 0xf085,*/
+      "items": [
+        {
+          "id":2,
+          "text": "用户管理",
+          /*"iconCls": "user",*/
+          "leaf":true,
+          "xtype":"userlist",
+          "uri": "/user/list"
+        },
+        {
+          "id":3,
+          "text":"角色管理",
+          "leaf":true,
+          "xtype":"rolelist",
+          "uri": "/role/list"
+        },
+        {
+          "id":4,
+          "text":"菜单管理",
+          "leaf":true,
+          "xtype":"treemenu",
+          "uri": "/menu/list"
+        },
+        {
+          "id":5,
+          "text":"日志管理",
+          "leaf":true,
+          "xtype":"loglist",
+          "uri": "/log/list"
+        }
+      ]
+    },
+    {
+      "id":6,
+      "text": "商品管理",
+      "sort": 1,
+      "items": [
+        {
+          "text": "商品管理",
+          "leaf":true,
+          "uri": "/user/list"
+        }
+      ]
+    }
+  ]
+}
