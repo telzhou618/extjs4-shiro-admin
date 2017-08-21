@@ -217,25 +217,44 @@
 
 	<build>
 		<finalName>extjs4-shiro-admin</finalName>
+
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<!-- 是否替换资源中的属性 -->
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<!-- <includes> <include>**/*.properties</include> <include>**/*.xml</include> 
+					</includes> <filtering>true</filtering> -->
+			</resource>
+		</resources>
 		
-		<resources>  
-            <resource>  
-                <directory>src/main/java</directory>  
-                <includes>  
-                    <include>**/*.properties</include>  
-                    <include>**/*.xml</include>  
-                </includes>  
-                <!-- 是否替换资源中的属性-->  
-                <filtering>false</filtering>  
-            </resource>  
-            <resource>  
-                <directory>src/main/resources</directory>  
-                <!--  
-                    <includes> <include>**/*.properties</include>  
-                    <include>**/*.xml</include> </includes> <filtering>true</filtering>  
-                -->  
-            </resource>  
-</resources> 
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<verbal>true</verbal>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.16.v20140903</version>
+			</plugin>
+
+		</plugins>
 		
 	</build>
 </project>

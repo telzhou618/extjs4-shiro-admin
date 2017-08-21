@@ -38,8 +38,7 @@ Ext.define('Admin.ux.form.KindEditor', {
                     me.KindEditorIsReady = true;
                 }
             }));
-             
-　　　　　　//这块 组件的父容器关闭的时候 需要销毁编辑器 否则第二次渲染的时候会出问题 可根据具体布局调整
+           //这块 组件的父容器关闭的时候 需要销毁编辑器 否则第二次渲染的时候会出问题 可根据具体布局调整　　　　　　
             var win = me.up('window');
             if (win && win.closeAction == "hide") {
                 win.on('beforehide', function () {
