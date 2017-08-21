@@ -24,7 +24,6 @@ https://www.sencha.com/store/extjs/
 
 ### 实例截图
 -------------
-
 ![image](https://git.oschina.net/uploads/images/2017/0821/142907_8a2604f6_89451.png "0.png")
 ![image](https://git.oschina.net/uploads/images/2017/0821/142917_a2859dad_89451.png "1.png")
 ![image](https://git.oschina.net/uploads/images/2017/0821/142926_d0daab38_89451.png "2.png")
