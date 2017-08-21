@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vacomall</groupId>
-	<artifactId>ext-shiro-admin</artifactId>
+	<artifactId>extjs4-shiro-admin</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ext-shiro-admin Maven Webapp</name>
+	<name>extjs4-shiro-admin Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 
@@ -216,7 +216,7 @@
 
 
 	<build>
-		<finalName>ext-shiro-admin</finalName>
+		<finalName>extjs4-shiro-admin</finalName>
 		
 		<resources>  
             <resource>  
