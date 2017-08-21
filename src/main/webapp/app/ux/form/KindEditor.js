@@ -1,6 +1,6 @@
-Ext.define('Admin.ux.form.KindEditor', {
+Ext.define('AM.ux.form.KindEditor', {
     extend: 'Ext.form.field.Text',
-    xtype:'kindeditor',
+    alias : 'widget.kindeditor',
     alternateClassName: 'Ext.form.KindEditor',
     fieldSubTpl: [
         '<textarea id="{id}" {inputAttrTpl}',

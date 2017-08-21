@@ -1,7 +1,7 @@
 
 Ext.define('AM.ux.GridColumnView',{
 	extend:'Ext.grid.column.Column',
-	xtype:'gridcolumnview',
+	alias:'widget.gridcolumnview',
     initComponent : function(){
     	this.callParent(arguments);
     	var me = this;

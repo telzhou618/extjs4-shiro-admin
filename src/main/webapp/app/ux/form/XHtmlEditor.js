@@ -1,6 +1,6 @@
-Ext.define('Admin.ux.form.XHtmlEditor',{
+Ext.define('AM.ux.form.XHtmlEditor',{
     extend:'Ext.form.field.HtmlEditor',
-    xtype:'xhtmleditor',
+    alias:'widget.xhtmleditor',
     //扩展的属性
     uploadConfig:{
         url:''//后台上传地址

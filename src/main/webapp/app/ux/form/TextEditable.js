@@ -1,6 +1,6 @@
-Ext.define('Admin.ux.form.TextEditable', {
+Ext.define('AM.ux.form.TextEditable', {
     extend: 'Ext.window.Window',
-    xtype:'texteditable',
+    alias:'widget.texteditable',
     header:true,
     layout:'fit',
     resizable:false,

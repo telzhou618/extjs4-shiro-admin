@@ -1,7 +1,7 @@
 Ext.define("AM.ux.SimpleComboBoxTree", {
     extend: "Ext.form.field.Picker",
     requires: ["Ext.tree.Panel"],
-    xtype:'simple-combobox-tree',
+    alias:'widget.simple-combobox-tree',
     initComponent: function() {
         var self = this;
         Ext.apply(self, {

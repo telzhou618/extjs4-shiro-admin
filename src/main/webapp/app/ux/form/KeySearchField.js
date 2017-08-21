@@ -1,8 +1,6 @@
-Ext.define('Admin.ux.form.KeySearchField', {
+Ext.define('AM.ux.form.KeySearchField', {
     extend: 'Ext.form.field.Trigger',
-
-    xtype: 'keysearchfield',
-
+    alias : 'widget.keysearchfield',
     trigger1Cls: Ext.baseCSSPrefix + 'form-clear-trigger',
 
     trigger2Cls: Ext.baseCSSPrefix + 'form-search-trigger',

@@ -1,6 +1,6 @@
-Ext.define('Admin.ux.form.WangEditor', {
+Ext.define('AM.ux.form.WangEditor', {
     extend: 'Ext.panel.Panel',
-    xtype:'wangeditor',
+    alias:'widget.wangeditor',
 	width:700,
 	height:300,
 	cfg:{
