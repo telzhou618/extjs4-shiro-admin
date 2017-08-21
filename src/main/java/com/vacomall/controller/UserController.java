@@ -7,7 +7,9 @@ import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -128,5 +130,20 @@ public class UserController extends AdminController{
 		sysUser.setPassword(BaseUtil.md51024Pwd(pwd, sysUser.getUserName()));
 		sysUserService.updateById(sysUser);
 		return Rest.ok();
+	}
+	
+	/**
+	 * 获取当前用户
+	 * @return
+	 */
+	@RequestMapping("/get/curuser")
+	public Rest getCurUser(){
+		
+		Subject subject = SecurityUtils.getSubject();
+		if(subject != null){
+			SysUser sysUser = (SysUser) subject.getPrincipal();
+			return Rest.okData(sysUser);
+		}
+		return Rest.failure("登录过期");
 	}
 }

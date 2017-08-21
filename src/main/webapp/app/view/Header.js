@@ -32,7 +32,27 @@ Ext.define('AM.view.Header', {
         {
             xtype:"displayfield",
             fieldCls:'s-color',
-            value:'Admin'
+            value:'未登录',
+            listeners:{
+                render:function(){
+                    var me = this;
+                    Ext.Ajax.request({
+                        url: '/user/get/curuser',
+                        success: function(response, opts) {
+                            var obj = Ext.decode(response.responseText);
+                            if(obj.success){
+                                var user = obj.data;
+                                me.setValue(user.userName);
+                            }else{
+                                window.location.href="/logout";
+                            }
+                        },
+                        failure: function(response, opts) {
+
+                        }
+                    });
+                }
+            }
         },
         { xtype: 'tbspacer'},
         {
