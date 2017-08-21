@@ -24,9 +24,10 @@ https://www.sencha.com/store/extjs/
 
 ### 实例截图
 -------------
-![image](https://github.com/foreyer/extjs4-shiro-admin/blob/master/imgs/0.png)
-![image](https://github.com/foreyer/extjs4-shiro-admin/blob/master/imgs/1.png)
-![image](https://github.com/foreyer/extjs4-shiro-admin/blob/master/imgs/2.png)
-![image](https://github.com/foreyer/extjs4-shiro-admin/blob/master/imgs/3.png)
-![image](https://github.com/foreyer/extjs4-shiro-admin/blob/master/imgs/4.png)
+
+![image](https://git.oschina.net/uploads/images/2017/0821/142907_8a2604f6_89451.png "0.png")
+![image](https://git.oschina.net/uploads/images/2017/0821/142917_a2859dad_89451.png "1.png")
+![image](https://git.oschina.net/uploads/images/2017/0821/142926_d0daab38_89451.png "2.png")
+![image](https://git.oschina.net/uploads/images/2017/0821/142934_334ddd2b_89451.png "3.png")
+![image](https://git.oschina.net/uploads/images/2017/0821/142944_8877933b_89451.png "4.png")
 
