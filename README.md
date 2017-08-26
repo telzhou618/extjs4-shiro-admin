@@ -15,7 +15,9 @@ Extjs4、Spring MVC、Mybatis、Mybatis-Plus、Shiro、Mysql、Maven
 
 ### 参考项目
 -------------
-https://www.sencha.com/store/extjs/
+Extjs官网: https://www.sencha.com/store/extjs/
+
+Extjs官方GPL版下载地址: https://www.sencha.com/legal/GPL/
 
 ### 开发进度
 -------------
