@@ -114,7 +114,7 @@ public class UserController extends AdminController{
 		return Rest.ok();
 	}
 	
-	@RequiresPermissions("user:resetpwd")
+	@RequiresPermissions("user:restpwd")
 	@RequestMapping("/repwd")
 	public Rest repwd(String id,String pwd){
 		if(StringUtils.isBlank(id)){
