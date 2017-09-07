@@ -72,6 +72,7 @@ public class UserController extends AdminController{
 	 * @return
 	 */
 	@RequiresPermissions("user:add")
+	@RequestMapping("/add")
 	public Rest add(SysUser sysUser,String confPassword, String[] rids){
 		if(!confPassword.equals(sysUser.getPassword())){
 			return Rest.failure("两次输入的密码不一致");
