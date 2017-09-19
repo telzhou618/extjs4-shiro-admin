@@ -12,6 +12,7 @@ Extjs4、Spring MVC、Mybatis、Mybatis-Plus、Shiro、Mysql、Maven
 3. mvn clean install
 4. mvn jetty:run
 5. http://localhost:8080
+6. 账号密码: admin/123456 或 test/123456
 
 ### 参考项目
 -------------
